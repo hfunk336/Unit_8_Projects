@@ -14,9 +14,51 @@
 */
 
 /* Table Styles */
-
-
+table.spuzzle{
+   /* sizes the entire sudoku puzzle */
+   border-collapse: collapse;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+}
+td{
+   /* sizes the 3x3 grids */
+   border-width: 5px;
+   border-style: outset;
+   border-color: gray;
+   width: 33.3%;
+}
+th{
+   color: gray;
+   padding-right: 10px;
+   padding-bottom: 10px;
+}
 
 /* Inner Table Styles */
-
+table.subTable{
+   /* makes the boxes */
+   border-collapse: collapse;
+   width: 100%;
+}
+table.subTable td{
+   /* creates the blue glow onto the boxes */
+   box-shadow: inset 0px 0px 15px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: black;
+   color: blue;
+   height: 40px;
+   vertical-align: center;
+   text-align: center;
+}
+td.goldBox td{
+   /* goldBox will be gold */
+   background-color: rgb(228, 199, 42);
+}
+td.greenBox td{
+   /* greenBox will be green */
+   background-color: rgb(203, 229, 130);
+}
 
