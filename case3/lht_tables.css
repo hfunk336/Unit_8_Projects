@@ -25,13 +25,83 @@
       display: none;
    }
    caption{
-      
+      color: white;
+      background-color: rgb(95, 95, 95);
+      font-size: 1.5em;
+      line-height: 2em;
    }
+   td{
+      border-width: 1px;
+      border-style: dotted;
+      border-color: grey;
+      color: (11, 12, 145);
+      position: relative;
+      padding-left: 40%;
+      min-height: 40px;
+   }
+   tr:nth-of-type(odd){
+      background-color: rgb(255, 235, 178);
+      border-width: 2px;
+      border-style: style;
+      border-color: grey;
+   }
+   /* Question 14
+      [data-date]{
+      position: absolute;
+      width: 40%;
+      padding: 5px;
+   } */
 }
-
-
 
 /* =============================================
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+@media only screen and (min-width: 641px){
+   table{
+      background-image: url(lht_photo1.png);
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      width: 40%;
+      border-width: 6px;
+      border-style: double; 
+      border-color: rgb(154, 64, 3);
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-right: auto;
+      margin-left: auto;
+      table-layout: fixed;
+      width: 85%;
+   }
+   th, td{
+      border-width: 1px;
+      border-color: grey;
+      border-style: solid;
+      font-size: 0.85em;
+      font-weight: normal;
+      padding: 5px;
+      text-align: top;
+      width: 14.28%;
+      word-wrap: initial;
+   }
+   td{
+      background-color: rbga(171, 171, 171, 0.6);
+      color: rgb(11, 12, 145);
+   }
+   /* Question 19
+    td{
+
+   } */
+   caption{
+      caption-side: top;
+      text-align: center;
+      padding-bottom: 10px;
+      font-size: 1.2em;
+      letter-spacing: 3px;
+   }
+   thead th{
+      background-color: rgb(154, 64, 3);
+      color: white;
+   }
+}
