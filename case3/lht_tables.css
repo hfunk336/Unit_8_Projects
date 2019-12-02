@@ -17,91 +17,89 @@
    Mobile Styles: 0px to 640px 
    ===============================
 */
+/* only affects screens under 640px */
 @media only screen and (max-width: 640px){
    table, tbody, tr, td, th, caption{
       display: block;
    }
-   thead h1{
+   thead, h1{
+      /* hides these in mobile */
       display: none;
    }
    caption{
       color: white;
-      background-color: rgb(95, 95, 95);
+      background-color: gray;
       font-size: 1.5em;
       line-height: 2em;
    }
    td{
-      border-width: 1px;
-      border-style: dotted;
-      border-color: grey;
-      color: (11, 12, 145);
+      border: 1px dotted gray;
+      color: rgb(11,12,145);
       position: relative;
       padding-left: 40%;
       min-height: 40px;
    }
    tr:nth-of-type(odd){
-      background-color: rgb(255, 235, 178);
-      border-width: 2px;
-      border-style: style;
-      border-color: grey;
+      /* only the odd numbered tr's are affected */
+      background-color: rgb(255,235,178);
+      border: 2px solid gray;
    }
-   /* Question 14
-      [data-date]{
+   td::before{
+      /* pseudo-code before places it before */
       position: absolute;
+      top: 0;
+      left: 0;
+      content: attr(data-date);
       width: 40%;
       padding: 5px;
-   } */
+   }
 }
 
 /* =============================================
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+/* affects screens above 640 px */
 @media only screen and (min-width: 641px){
    table{
-      background-image: url(lht_photo1.png);
+      /* image in the bottom right */
+      background: url(lht_photo1.png);
       background-repeat: no-repeat;
-      background-position: right bottom;
-      width: 40%;
-      border-width: 6px;
-      border-style: double; 
-      border-color: rgb(154, 64, 3);
+      background-position: bottom right;
+      background-image: 40%;
+      border: 6px double rgb(154,64,3);
       border-collapse: collapse;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      margin-right: auto;
-      margin-left: auto;
+      margin: 20px auto 20px auto;
       table-layout: fixed;
       width: 85%;
    }
    th, td{
-      border-width: 1px;
-      border-color: grey;
-      border-style: solid;
+      border: 1px solid gray;
       font-size: 0.85em;
       font-weight: normal;
       padding: 5px;
-      text-align: top;
+      vertical-align: top;
       width: 14.28%;
-      word-wrap: initial;
+      word-wrap: break-word;
    }
    td{
-      background-color: rbga(171, 171, 171, 0.6);
-      color: rgb(11, 12, 145);
+      background-color: rgba(171,171,171,0.6);
+      color: rgb(11,12,145);
    }
-   /* Question 19
-    td{
-
-   } */
+   td[data-date~="Feb"]{
+      /* only the data dates starting with Feb get affected */
+      background-color: rgba(232,214,148,0.6);
+      box-shadow: inset 0px 0px 20px gray;
+   }
    caption{
-      caption-side: top;
-      text-align: center;
+      /* positions the caption */
+      align-content: center;
       padding-bottom: 10px;
       font-size: 1.2em;
       letter-spacing: 3px;
    }
-   thead th{
-      background-color: rgb(154, 64, 3);
+   th{
+      background-color: rgb(154,64,3);
       color: white;
    }
 }
